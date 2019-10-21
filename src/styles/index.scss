@@ -1,0 +1,213 @@
+$bellotero-blue: #071eb3;
+$bellotero-dark: #161616;
+$bellotero-gray: #a5a5a5;
+$bellotero-light-blue: #d6dcff;
+* {
+  font-family: Roboto;
+}
+
+$md: 768px;
+
+html {
+  font-size: 14px;
+  #root {
+    min-height: 100vh;
+    background-color: #f9faff;
+    @media (min-width: $md) {
+      height: 100vh;
+    }
+    .navbar {
+      min-height: 64px;
+
+      @media (min-width: $md) {
+        top: 0;
+        left: 0;
+        right: 0;
+        position: fixed;
+      }
+      .nav-link {
+        cursor: pointer;
+        font-weight: 500;
+        letter-spacing: 0.3px;
+        color: $bellotero-blue;
+
+        @media (min-width: $md) {
+          &.nav-selected {
+            position: relative;
+            &:after {
+              left: 0;
+              top: -1rem;
+              width: 100%;
+              content: '';
+              position: absolute;
+              border-top: 4px solid $bellotero-blue;
+            }
+          }
+        }
+      }
+    }
+
+    .bellotero-title {
+      display: initial;
+      color: white;
+      font-size: 36px;
+      padding: 8px 4px;
+      min-height: 40px;
+      font-weight: 900;
+      width: fit-content;
+      letter-spacing: 0.77px;
+      box-decoration-break: clone;
+      border-bottom: 1px solid white;
+      background-color: $bellotero-blue;
+      -webkit-box-decoration-break: clone;
+    }
+
+    .testimonial {
+      .bellotero-title {
+        line-height: 1.11;
+      }
+
+      .testimonial-card {
+        padding: 32px;
+        font-weight: bold;
+        color: $bellotero-dark;
+
+        .testimonial-card-person {
+          font-size: 32px;
+          line-height: 1.5;
+          .testimonial-card-person-position {
+            font-size: 14px;
+            font-weight: normal;
+            color: $bellotero-gray;
+          }
+        }
+        .testimonial-card-message {
+          font-size: 24px;
+          line-height: 1.33;
+        }
+      }
+      .testimonial-nav {
+        font-size: 32px;
+        font-weight: 600;
+        margin-top: -25px;
+
+        .testimonial-nav-page {
+          width: 120px;
+          height: 56px;
+          color: white;
+          font-style: italic;
+          letter-spacing: 0.69px;
+          font-family: CormorantGaramond;
+          background-color: $bellotero-blue;
+        }
+
+        .testimonial-nav-directions {
+          height: 56px;
+          background-color: $bellotero-blue;
+          button {
+            width: 56px;
+            height: 100%;
+            color: white;
+
+            &.disabled {
+              opacity: 0.5;
+              pointer-events: none;
+            }
+          }
+        }
+      }
+    }
+    .calculator {
+      .calculator-side-left {
+        .bellotero-title {
+          line-height: 1.8;
+        }
+        .calculator-description {
+          font-size: 16px;
+          line-height: 1.5;
+          color: $bellotero-dark;
+        }
+      }
+
+      .calculator-side-right {
+        color: $bellotero-dark;
+        .calculator-slider {
+          .calculator-slider-label {
+            flex: 1;
+            font-size: 14px;
+            font-weight: bold;
+          }
+
+          .calculator-slider-value {
+            flex: 1;
+
+            > div {
+              padding: 2px 6px;
+              border-radius: 4px;
+              background-color: white;
+              border: solid 1px $bellotero-light-blue;
+              small {
+                opacity: 0.24;
+                font-size: 24px;
+                font-weight: 500;
+                line-height: 1.67;
+                letter-spacing: 0.51px;
+              }
+              span {
+                font-size: 36px;
+                font-weight: 500;
+                line-height: 1.11;
+                padding-left: 33px;
+                letter-spacing: 0.77px;
+              }
+            }
+          }
+          input[type='range'] {
+            width: 100%;
+            height: 4px;
+            -webkit-appearance: none;
+            background-image: linear-gradient(
+              to right,
+              $bellotero-blue calc(var(--value) * 1%),
+              #f0f2ff 0
+            );
+          }
+          input[type='range']::-webkit-slider-thumb {
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            -webkit-appearance: none;
+            background-color: white;
+            border: solid 5px $bellotero-blue;
+            box-shadow: 0 2px 8px 0 rgba(7, 30, 179, 0.24);
+          }
+        }
+      }
+      .calculator-sumary {
+        min-width: 25%;
+        .calculator-sumary-values {
+          small {
+            font-size: 36px;
+            font-weight: 500;
+            line-height: 1.11;
+            letter-spacing: 0.77px;
+            color: $bellotero-blue;
+          }
+          span {
+            line-height: 1;
+            font-size: 72px;
+            font-weight: 500;
+            text-align: right;
+            letter-spacing: 1px;
+            color: $bellotero-blue;
+          }
+        }
+        .calculator-sumary-label {
+          font-size: 14px;
+          font-weight: bold;
+          color: $bellotero-dark;
+        }
+      }
+    }
+  }
+}

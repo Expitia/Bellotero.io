@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testimonial should render Testimonial component 1`] = `
+<div
+  className="testimonial container d-flex flex-column"
+>
+  <div
+    className="bellotero-title mb-5"
+  >
+    Titulo de prueba
+  </div>
+</div>
+`;

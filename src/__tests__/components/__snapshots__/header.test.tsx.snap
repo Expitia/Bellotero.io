@@ -1,0 +1,67 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header should render Header component 1`] = `
+<Navbar
+  color="white"
+  expand="md"
+  light={true}
+  tag="nav"
+>
+  <div
+    className="container d-flex w-100"
+  >
+    <NavbarBrand
+      href="/"
+      tag="a"
+    >
+      <img
+        src="bellotero.png"
+      />
+    </NavbarBrand>
+    <NavbarToggler
+      color="red"
+      onClick={[Function]}
+      tag="button"
+      type="button"
+    />
+    <Collapse
+      appear={false}
+      enter={true}
+      exit={true}
+      in={false}
+      isOpen={false}
+      mountOnEnter={false}
+      navbar={true}
+      onEnter={[Function]}
+      onEntered={[Function]}
+      onEntering={[Function]}
+      onExit={[Function]}
+      onExited={[Function]}
+      onExiting={[Function]}
+      tag="div"
+      timeout={350}
+      unmountOnExit={false}
+    >
+      <Nav
+        className="ml-auto"
+        navbar={true}
+        tag="ul"
+        vertical={false}
+      >
+        <NavItem
+          key="0"
+          tag="li"
+        >
+          <NavLink
+            className="nav-link"
+            onClick={[Function]}
+            tag="a"
+          >
+            Calculator example
+          </NavLink>
+        </NavItem>
+      </Nav>
+    </Collapse>
+  </div>
+</Navbar>
+`;

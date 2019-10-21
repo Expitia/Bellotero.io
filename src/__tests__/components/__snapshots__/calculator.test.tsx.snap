@@ -1,0 +1,59 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Calculator should render Calculator component 1`] = `
+<div
+  className="calculator container"
+>
+  <div
+    className="row"
+  >
+    <div
+      className="calculator-side-left col-sm-12 col-md-5"
+    >
+      <div
+        className="bellotero-title"
+      >
+        Testing
+      </div>
+      <div
+        className="calculator-description mt-5 "
+      >
+        Testing component
+      </div>
+    </div>
+    <div
+      className="calculator-side-right col-sm-12 col-md-6 offset-md-1"
+    >
+      <Slider
+        label="Monthly ingredient spending"
+        maxRange={100}
+        minRange={10}
+        onChange={[Function]}
+        value={150}
+        valuePrefix="$"
+        valueToDisplay="150"
+      />
+      <Slider
+        label="Full-time employees that process invoices"
+        maxRange={10}
+        minRange={1}
+        onChange={[Function]}
+        value={50}
+      />
+    </div>
+  </div>
+  <div
+    className="d-flex justify-content-between justify-content-md-end "
+  >
+    <Sumary
+      className="mr-3"
+      label="Estimated cost food savings"
+      value="15.00"
+    />
+    <Sumary
+      label="Your estimated annual savings"
+      value="150"
+    />
+  </div>
+</div>
+`;
